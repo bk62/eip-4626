@@ -1,29 +1,34 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/pooltogether/pooltogether--brand-assets">
     <img src="https://github.com/pooltogether/pooltogether--brand-assets/blob/977e03604c49c63314450b5d432fe57d34747c66/logo/pooltogether-logo--purple-gradient.png?raw=true" alt="PoolTogether Brand" style="max-width:100%;" width="200">
   </a>
 </p>
 
-<br />
+<br /> -->
 
-# PoolTogether Contracts Template
+# EIP-4626 Implementations
 
-[![Coverage Status](https://coveralls.io/repos/github/pooltogether/pooltogether-contracts-template/badge.svg?branch=master)](https://coveralls.io/github/pooltogether/pooltogether-contracts-template?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/bk62/eip-4626/badge.svg?branch=master)](https://coveralls.io/github/bk62/eip-4626?branch=master)
 
-![Tests](https://github.com/pooltogether/pooltogether-contracts-template/actions/workflows/main.yml/badge.svg)
+![Tests](https://github.com/bk62/eip-4626/actions/workflows/main.yml/badge.svg)
 
-# Usage
+EIP 4626 implementations.
 
-1. Clone this repo: `git clone git@github.com:pooltogether/pooltogether-contracts-template.git <DESTINATION REPO>`
-1. Create repo using Github GUI
-1. Set remote repo (`git remote add origin git@github.com:pooltogether/<NAME_OF_NEW_REPO>.git`),
+## IERC4626
+
+An interface for ERC-4626 contracts
+
+## AbstractERC4626
+
+Abstract Contract Implementation of ERC-4626 using OpenZeppelin `ERC20` (including `IERC20Metadat`) and pre/post deposit/withdrawal hooks.
+
+# Development
+
+1. Clone this repo: `git clone git@github.com:bk62/eip-4626.git`
 1. Checkout a new branch (`git checkout -b name_of_new_branch`)
 1. Begin implementing as appropriate.
-1. Update this README
-
-## Usage
-
-This repo is setup to compile (`nvm use && yarn compile`) and successfully pass tests (`yarn test`)
+1. Compile (`nvm use && yarn compile`)
+1. Test (`yarn test`)
 
 # Preset Packages
 
@@ -59,3 +64,8 @@ Run the unit tests locally with:
 
 Generate the test coverage report with:
 `yarn coverage`
+
+## References
+
+[EIP 4626](https://eips.ethereum.org/EIPS/eip-4626)
+[Solmate ERC4626 Reference Implementation](https://github.com/Rari-Capital/solmate/blob/main/src/test/ERC4626.t.sol)
